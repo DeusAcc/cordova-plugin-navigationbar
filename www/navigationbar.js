@@ -70,6 +70,10 @@ var NavigationBar = {
     show: function () {
         exec(null, null, "NavigationBar", "show", []);
         NavigationBar.isVisible = true;
+    },
+
+    getNavigationBarHeight: function(successCallback, errorCallback) {
+        exec(successCallback, errorCallback, "NavigationBar", "getNavigationBarHeight", []);
     }
 
 };
@@ -87,4 +91,4 @@ window.setTimeout(function () {
     }, null, "NavigationBar", "_ready", []);
 }, 0);
 
-module.exports = NavigationBar ;
+module.exports = NavigationBar;
