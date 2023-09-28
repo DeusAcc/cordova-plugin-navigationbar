@@ -207,4 +207,16 @@ public class NavigationBar extends CordovaPlugin {
         }
         return result;
     }
+
+    @Override
+    public boolean execute(final String action, final CordovaArgs args, final CallbackContext callbackContext) throws JSONException {
+        ...
+        if ("getNavigationBarHeight".equals(action)) {
+            int height = getNavigationBarHeight();
+            callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, height));
+            return true;
+        }
+        ...
+    }
 }
+
