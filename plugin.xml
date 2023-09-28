@@ -50,6 +50,7 @@
             <feature name="NavigationBar">
                 <param name="android-package" value="com.viniciusfagundes.cordova.plugin.navigationbar.NavigationBar" />
                 <param name="onload" value="true" />
+                <action name="getNavigationBarHeight" value="getNavigationBarHeight" />
             </feature>
         </config-file>
     </platform>
