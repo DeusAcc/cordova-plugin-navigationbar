@@ -198,4 +198,13 @@ public class NavigationBar extends CordovaPlugin {
             }
         }
     }
+
+    private int getNavigationBarHeight() {
+        int result = 0;
+        int resourceId = cordova.getActivity().getResources().getIdentifier("navigation_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = cordova.getActivity().getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
+    }
 }
